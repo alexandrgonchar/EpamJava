@@ -42,7 +42,7 @@ public class Console {
 
     public static void showHand (Player player, Hand hand) {
         System.out.println(player.toString() + " hand is: "
-                + hand.getHand() + ". Score: " + hand.getScore());
+                + hand.getHand() + " Score: " + hand.getScore());
     }
 
     static void getCongratulations (Player player) {
