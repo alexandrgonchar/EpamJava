@@ -13,14 +13,14 @@ public class ComputerTest {
     private Computer computer;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         deck = new Deck();
         hand = new Hand(deck);
         computer = new Computer(hand);
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         computer = null;
         hand = null;
         deck = null;

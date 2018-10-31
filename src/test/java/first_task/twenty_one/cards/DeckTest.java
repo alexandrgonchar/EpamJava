@@ -11,12 +11,12 @@ public class DeckTest {
     private Card card;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         deck = new Deck();
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         deck = null;
         card = null;
     }

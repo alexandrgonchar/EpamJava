@@ -11,15 +11,13 @@ import java.io.InputStream;
 import static org.junit.Assert.*;
 
 public class HumanTest {
-    private Deck deck;
-    private Hand hand;
     private Human human;
     private InputStream is;
 
     @Before
-    public void setUp() throws Exception {
-        deck = new Deck();
-        hand = new Hand(deck);
+    public void setUp() {
+        Deck deck = new Deck();
+        Hand hand = new Hand(deck);
         human = new Human(hand);
 
         StringBuilder sb = new StringBuilder();

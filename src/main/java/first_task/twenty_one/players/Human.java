@@ -4,13 +4,11 @@ import first_task.twenty_one.Console;
 
 import java.util.Locale;
 
-public class Human extends Player{
-    private Hand hand;
+public class Human extends Player {
     private boolean isPlay = true;
 
     public Human(Hand hand) {
         super(hand);
-        this.hand = hand;
     }
 
     @Override
@@ -18,8 +16,8 @@ public class Human extends Player{
         if (isPlay) {
             switch (Console.readFromConsole().toUpperCase(Locale.ENGLISH)) {
                 case "Y":
-                    hand.drawOne();
-                    Console.showHand(this, hand);
+                    this.getHand().drawOne();
+                    Console.showHand(this, this.getHand());
                     break;
                 case "N":
                     isPlay = false;
@@ -30,6 +28,11 @@ public class Human extends Player{
                     break;
             }
         }
+    }
+
+    @Override
+    public Hand getHand() {
+        return super.getHand();
     }
 
     @Override

@@ -19,7 +19,7 @@ public class CardTest {
 
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         aceCard = new Card(Rank.ACE, Suit.CLUBS);
         kingCard = new Card(Rank.KING, Suit.CLUBS);
         queenCard = new Card(Rank.QUEEN, Suit.CLUBS);
@@ -32,7 +32,7 @@ public class CardTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         aceCard = null;
         kingCard = null;
         queenCard = null;

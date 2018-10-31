@@ -12,13 +12,13 @@ public class HandTest {
     private Hand hand;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         deck = new Deck();
         hand = new Hand(deck);
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         hand = null;
         deck = null;
     }

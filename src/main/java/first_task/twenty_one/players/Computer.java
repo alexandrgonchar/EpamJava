@@ -1,23 +1,26 @@
 package first_task.twenty_one.players;
 
 public class Computer extends Player {
-    private Hand hand;
     private boolean isPlay = true;
 
     public Computer (Hand hand) {
         super(hand);
-        this.hand = hand;
     }
 
     @Override
     public void isTwentyOne () {
         if (isPlay) {
-            if (hand.getScore() >= 20) {
+            if (this.getHand().getScore() >= 20) {
                 isPlay = false;
-            } else if (hand.getScore() < 20) {
-                hand.drawOne();
+            } else if (this.getHand().getScore() < 20) {
+                this.getHand().drawOne();
             }
         }
+    }
+
+    @Override
+    public Hand getHand() {
+        return super.getHand();
     }
 
     @Override
