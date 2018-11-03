@@ -1,5 +1,7 @@
 package first_task.twenty_one.cards;
 
+import java.util.Locale;
+
 public class Card {
     private Rank rank;
     private Suit suit;
@@ -16,7 +18,7 @@ public class Card {
     }
 
     private String getSuit() {
-        return suit.getSuit();
+        return suit.toString().toLowerCase(Locale.ENGLISH);
     }
 
     public int getValue() {
