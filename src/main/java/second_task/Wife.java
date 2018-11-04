@@ -3,18 +3,15 @@ package second_task;
 import second_task.shop.Product;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Wife {
+class Wife {
 
     private ArrayList<String> items = new ArrayList<>();
 
-    public Wife (List<String> list) {
-        items.addAll(list);
-    }
-
-    Wife (String product) {
-        items.add(product);
+    Wife (String ... products) {
+        items.addAll(Arrays.asList(products));
     }
 
     ArrayList<String> getList () {
